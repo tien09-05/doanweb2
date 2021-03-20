@@ -1,14 +1,13 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const Item = new Schema({
+const watch = new Schema({
     name: String,
     type: String,
-    price: BigInt64Array,
+    price: String,
     img: String,
-    createdAt: { type: Date, default: Date.now },
+    createAt: { type: Date, default: Date.now },
     updateAt: { type: Date, default: Date.now },
+})
 
-});
-
-module.exports = mongoose.model('Item', Item);
+module.exports = mongoose.model("Model", watch, "watch");

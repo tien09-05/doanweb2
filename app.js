@@ -7,6 +7,13 @@ var route = require('./src/routes')
 // Connect to db
 db.connect()
 
+app.use(
+    express.urlencoded({
+        extended: true,
+    }),
+);
+app.use(express.json());
+
 app.use(express.static("public"))
 
 app.engine('handlebars', exphbs());
@@ -15,4 +22,4 @@ app.set('view engine', 'handlebars');
 // Route init
 route(app);
 
-app.listen(3000);
+app.listen(3001);

@@ -1,15 +1,21 @@
-function SiteController() {
+const Watch = require('../models/Watch.js');
+class SiteController {
+    // [GET] /
 
-    return {
-        index(req, res) {
-            res.render('home')
-        },
-        search(req, res) {
-            res.render('search')
-        }
+    index(req, res) {
+        Watch.find({}, function (err, course) {
+            if (!err) {
+                res.json(course);
+            } else {
+                res.status(400).json({ error: 'ERROR' })
+            }
+        });
     }
 
-
+    // [GET] /search
+    search(req, res) {
+        res.render('search');
+    }
 }
 
-module.exports = SiteController();
+module.exports = new SiteController();
