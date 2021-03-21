@@ -5,6 +5,11 @@ var siteController = require('../app/controllers/SiteController.js')
 
 //siteController.index
 router.get('/', siteController.index);
-router.get('/search', siteController.search);
+router.get('/admin', siteController.admin);
+
+router.get('/add', siteController.add);
+router.post('/save', siteController.save);
+router.get('/edit/:id', siteController.edit);
+router.put('/:id', siteController.update);
 
 module.exports = router;
