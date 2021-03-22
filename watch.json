@@ -1,0 +1,136 @@
+[{
+  "_id": {
+    "$oid": "60529d218f4ed8f79d5eab8f"
+  },
+  "name": "MVMT D-MR01-BLUS",
+  "type": "Nữ",
+  "price": "990000",
+  "img": "https://cdn.tgdd.vn/Products/Images/7264/203281/mvmt-d-mr01-blus-nam-1-400x400.jpg",
+  "updatedAt": {
+    "$date": "2021-03-21T08:57:57.074Z"
+  }
+},{
+  "_id": {
+    "$oid": "60529f69275eeb08b80fe9a4"
+  },
+  "name": "Aviator AVW8517G352",
+  "type": "Nam",
+  "price": "888000",
+  "img": "https://cdn.tgdd.vn/Products/Images/7264/209724/aviator-avw6971g352-nam-1-1-400x400.jpg",
+  "updatedAt": {
+    "$date": "2021-03-21T08:58:06.873Z"
+  }
+},{
+  "_id": {
+    "$oid": "60529fa1275eeb08b80fe9a5"
+  },
+  "name": "Mathey Tissot H411BPI",
+  "type": "Nam",
+  "price": "5663000",
+  "img": "https://cdn.tgdd.vn/Products/Images/7264/202679/orient-ra-ag0003s10b-nam-co-tu-dong-2-400x400.jpg"
+},{
+  "_id": {
+    "$oid": "6056fc94d7d17426f0c209ef"
+  },
+  "name": "Casio AE-1200WHD-1AVDF – Dây Kim Loại",
+  "price": "1246000",
+  "type": "Nam",
+  "img": "https://cdn3.dhht.vn/wp-content/uploads/2017/07/AE-1200WHD-1AVDF-399x399.jpg",
+  "createdAt": {
+    "$date": "2021-03-21T07:58:12.148Z"
+  },
+  "updatedAt": {
+    "$date": "2021-03-21T07:58:12.148Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6056fd265f898f15384b0550"
+  },
+  "name": "Citizen BI5006-81P – Dây Kim Loại",
+  "price": "2900000",
+  "type": "Nam",
+  "img": "https://cdn3.dhht.vn/wp-content/uploads/2018/10/86_BI5006-81P-399x399.jpg",
+  "createdAt": {
+    "$date": "2021-03-21T08:00:38.827Z"
+  },
+  "updatedAt": {
+    "$date": "2021-03-21T08:00:38.827Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6056fd3a747ba215f88d15ac"
+  },
+  "name": "Citizen BI5006-81P – Dây Kim Loại",
+  "price": "2900000",
+  "type": "Nam",
+  "img": "https://cdn3.dhht.vn/wp-content/uploads/2018/10/86_BI5006-81P-399x399.jpg",
+  "createdAt": {
+    "$date": "2021-03-21T08:00:58.664Z"
+  },
+  "updatedAt": {
+    "$date": "2021-03-21T08:00:58.664Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60570847bc6c080864e75e8a"
+  },
+  "name": "MVMT D-MR01-BLUS",
+  "price": "1760000",
+  "type": "Nam",
+  "img": "https://cdn.tgdd.vn/Products/Images/7264/203281/mvmt-d-mr01-blus-nam-1-400x400.jpg",
+  "createdAt": {
+    "$date": "2021-03-21T08:48:07.900Z"
+  },
+  "updatedAt": {
+    "$date": "2021-03-21T08:48:07.900Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "605709129df0201460450691"
+  },
+  "name": "MVMT D-MR01-BLUS",
+  "price": "1760000",
+  "type": "Nam",
+  "img": "https://cdn.tgdd.vn/Products/Images/7264/203281/mvmt-d-mr01-blus-nam-1-400x400.jpg",
+  "createdAt": {
+    "$date": "2021-03-21T08:51:30.756Z"
+  },
+  "updatedAt": {
+    "$date": "2021-03-21T08:51:30.756Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "605709179df0201460450692"
+  },
+  "name": "MVMT D-MR01-BLUS",
+  "price": "1760000",
+  "type": "Nam",
+  "img": "https://cdn.tgdd.vn/Products/Images/7264/203281/mvmt-d-mr01-blus-nam-1-400x400.jpg",
+  "createdAt": {
+    "$date": "2021-03-21T08:51:35.665Z"
+  },
+  "updatedAt": {
+    "$date": "2021-03-21T08:51:35.665Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60570c17828eef16d4e7270d"
+  },
+  "name": "",
+  "price": "",
+  "type": "",
+  "img": "",
+  "createdAt": {
+    "$date": "2021-03-21T09:04:23.817Z"
+  },
+  "updatedAt": {
+    "$date": "2021-03-21T09:04:23.817Z"
+  },
+  "__v": 0
+}]
