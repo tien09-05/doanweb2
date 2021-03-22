@@ -47,6 +47,13 @@ class SiteController {
             .then(() => res.redirect('/admin'))
 
     }
+
+    //[DELEE] /:id
+    delete(req, res) {
+        Watch.deleteOne({ _id: req.params.id })
+            .then(() => res.redirect('back'))
+
+    }
 }
 
 module.exports = new SiteController();
