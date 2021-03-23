@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 async function connect() {
     try {
-        await mongoose.connect('mongodb://localhost:27017/shopwatch', {
+        await mongoose.connect('mongodb+srv://tien09-05:123123123@cluster0.a8vpf.mongodb.net/shopwatch?retryWrites=true&w=majority', {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         });
