@@ -3,10 +3,10 @@
         <div class="col-lg-3">
             <h1 class="my-4">Shop Watch</h1>
             <div class="list-group">
-                <a href="#" class="list-group-item">Nam</a>
-                <a href="#" class="list-group-item">Nữ</a>
-                <a href="#" class="list-group-item">Giá tăng dần</a>
-                <a href="#" class="list-group-item">Giá giảm dần</a>
+                <a href="/sort?type=Nam" class="list-group-item">Nam</a>
+                <a href="/sort?type=Nữ" class="list-group-item">Nữ</a>
+                <a href="/sort?price=up" class="list-group-item">Giá tăng dần</a>
+                <a href="/sort?price=down" class="list-group-item">Giá giảm dần</a>
             </div>
         </div>
 
@@ -21,7 +21,7 @@
                                 <a href="#">{{this.name}}</a>
                             </h4>
                             <div class="d-flex justify-content-between">
-                                <h5 class="text-left">{{this.price}}</h5>
+                                <h5 class="text-left">{{format this.price}}</h5>
                                 <h5 class="text-right">{{this.type}}</h5>
 
                             </div>
@@ -36,5 +36,7 @@
                 {{/each}}
             </div>
         </div>
+
+
     </div>
 </div>

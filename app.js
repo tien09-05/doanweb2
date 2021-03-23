@@ -23,7 +23,13 @@ app.engine('handlebars', exphbs(
     {
         helpers: {
             sum: (a, b) => a + b,
-        }
+            format: (number) => {
+                const formatter = new Intl.NumberFormat('vn-VN');
+                // let resutl = formatter.format(number).substring(1);
+                return formatter.format(number) + " VND";
+            }
+        },
+
     }
 ));
 app.set('view engine', 'handlebars');
@@ -32,3 +38,5 @@ app.set('view engine', 'handlebars');
 route(app);
 
 app.listen(process.env.PORT || 3000);
+
+

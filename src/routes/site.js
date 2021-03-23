@@ -12,5 +12,6 @@ router.post('/save', siteController.save);
 router.get('/edit/:id', siteController.edit);
 router.put('/:id', siteController.update);
 router.delete('/:id', siteController.delete);
+router.get('/sort', siteController.sort);
 
 module.exports = router;
