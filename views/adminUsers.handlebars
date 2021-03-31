@@ -1,0 +1,33 @@
+<table class="table text-white">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Password</th>
+            <th scope="col">Role</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each users}}
+
+        <tr>
+            <th scope="row">{{sum @index 1}}</th>
+            <td>{{this.name}}</td>
+            <td>{{this.password}}</td>
+            <td>{{this.role}}</td>
+            <td class="d-flex" style="height: 65px;">
+                {{!-- cap quyen form --}}
+                <form method="post" action="/users/{{this._id}}?_method=PUT" id="formDelete">
+                    <button type="submit" class="btn btn-link text-white" data-toggle="modal"
+                        data-target="#exampleModal">Cấp quyền admin</button>
+                </form>
+                {{!-- delete form --}}
+                <form method="post" action="/users/{{this._id}}?_method=DELETE" id="formDelete">
+                    <button type="submit" class="btn btn-link text-white" data-toggle="modal"
+                        data-target="#exampleModal">Xóa</button>
+                </form>
+            </td>
+        </tr>
+        {{/each }}
+    </tbody>
+</table>

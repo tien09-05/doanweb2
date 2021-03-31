@@ -12,9 +12,27 @@
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
+
+
+                {{#if (isLogin)}}
+
+                {{#if (isAdmin)}}
                 <li class="nav-item">
-                    <a class="nav-link" href="/admin">Admin</a>
+                    <a class="nav-link" href="/admin">Admin </a>
                 </li>
+                {{/if}}
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout">Log Out </a>
+                </li>
+                {{else}}
+                <li class="nav-item">
+                    <a class="nav-link" href="/dangnhap">Đăng nhập </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/dangky">Đăng ký </a>
+                </li>
+                {{/if}}
+
 
             </ul>
         </div>

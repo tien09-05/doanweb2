@@ -1,55 +1,43 @@
 const Watch = require('../models/Watch.js');
+const User = require('../models/User.js');
+var localStorage = require('localStorage')
+
 class SiteController {
-    // [GET] /
-
     index(req, res, next) {
-        // });
-
         Watch.find({}).lean()
             .then(watches => {
                 res.render('home', { watches, formatter })
             })
             .catch(next)
     }
-    admin(req, res, next) {
+    dangnhap(req, res, next) {
+        res.render('dangnhap')
+    }
 
+    dangky(req, res, next) {
+        res.render('dangky')
+    }
+    logout(req, res, next) {
+        localStorage.setItem('user', "");
+        res.redirect('/')
+    }
+    admin(req, res, next) {
+        res.render('admin')
+    }
+    adminWatch(req, res, next) {
         Watch.find({}).lean()
             .then(watches => {
-                res.render('admin', { watches })
+                res.render('adminWatch', { watches })
             })
             .catch(next)
     }
-    add(req, res) {
-        res.render('add');
+    adminUsers(req, res, next) {
+        User.find({}).lean()
+            .then(users => {
+                res.render('adminUsers', { users })
+            })
+            .catch(next)
     }
-
-    save(req, res) {
-        const watch = new Watch(req.body)
-        watch.save()
-            .then(res => res.redirect('/'));
-    }
-
-    edit(req, res) {
-        Watch.findById(req.params.id).lean()
-            .then(watches => res.render('edit', watches))
-
-    }
-
-    //[PUT] /:id
-    update(req, res) {
-        Watch.updateOne({ _id: req.params.id }, req.body)
-            .then(() => res.redirect('/admin'))
-
-    }
-
-    //[DELEE] /:id
-    delete(req, res) {
-        Watch.deleteOne({ _id: req.params.id })
-            .then(() => res.redirect('back'))
-
-    }
-
-    //[GET] 
     sort(req, res) {
         if (req.query.type) {
             Watch.find({ type: req.query.type }).lean()
@@ -68,9 +56,7 @@ class SiteController {
                         res.render('home', { watches })
                     })
             }
-
         }
-
     }
 }
 var formatter = new Intl.NumberFormat('en-US', {
