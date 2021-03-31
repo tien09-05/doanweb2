@@ -16,7 +16,7 @@ class WatchController {
     save(req, res, next) {
         const watch = new Watch(req.body)
         watch.save()
-            .then(() => res.redirect('/admin'))
+            .then(() => res.redirect('/admin/watch'))
             .catch(next)
 
     }
@@ -30,7 +30,7 @@ class WatchController {
     //[PUT] /:id
     update(req, res) {
         Watch.updateOne({ _id: req.params.id }, req.body)
-            .then(() => res.redirect('/admin'))
+            .then(() => res.redirect('/admin/watch'))
 
     }
 
