@@ -10,6 +10,14 @@
         </tr>
     </thead>
     <tbody>
+        <form action="/admin/watch/search">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Tìm Kiếm </label>
+                <input type="" class="form-control" id="exampleInputEmail1" placeholder="Nhập từ khóa tìm kiếm"
+                    name="keyword">
+            </div>
+            <button type="submit" class="btn btn-primary">Tìm Kiếm </button>
+        </form>
         {{#each watches}}
 
         <tr>

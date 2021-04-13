@@ -7,6 +7,8 @@ var siteController = require('../app/controllers/SiteController.js')
 router.get('/', siteController.index);
 router.get('/admin', siteController.admin);
 router.get('/admin/watch', siteController.adminWatch);
+router.get('/admin/watch/search', siteController.adminWatchSearch);
+
 router.get('/admin/users', siteController.adminUsers);
 router.get('/sort', siteController.sort);
 router.get('/dangnhap', siteController.dangnhap);

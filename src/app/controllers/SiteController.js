@@ -31,6 +31,7 @@ class SiteController {
             })
             .catch(next)
     }
+
     adminUsers(req, res, next) {
         User.find({}).lean()
             .then(users => {
@@ -39,24 +40,49 @@ class SiteController {
             .catch(next)
     }
     sort(req, res) {
-        if (req.query.type) {
-            Watch.find({ type: req.query.type }).lean()
-                .then(watches => {
-                    res.render('home', { watches })
-                })
-        } else {
+        let type = req.query.type;
+        if (req.query.type && req.query.price) {
             if (req.query.price === "up") {
-                Watch.find().sort({ price: "1" }).lean()
+                Watch.find({ type: req.query.type }).sort({ price: "1" }).lean()
                     .then(watches => {
-                        res.render('home', { watches })
+                        res.render('home', { watches, type })
                     })
             } else {
-                Watch.find().sort({ price: "-1" }).lean()
+                Watch.find({ type: req.query.type }).sort({ price: "-1" }).lean()
                     .then(watches => {
-                        res.render('home', { watches })
+                        res.render('home', { watches, type })
                     })
             }
+        } else {
+            if (req.query.type) {
+                Watch.find({ type: req.query.type }).lean()
+                    .then(watches => {
+
+                        res.render('home', { watches, type })
+                    })
+            } else {
+                if (req.query.price === "up") {
+                    Watch.find().sort({ price: "1" }).lean()
+                        .then(watches => {
+                            res.render('home', { watches })
+                        })
+                } else {
+                    Watch.find().sort({ price: "-1" }).lean()
+                        .then(watches => {
+                            res.render('home', { watches })
+                        })
+                }
+            }
         }
+
+    }
+
+    adminWatchSearch(req, res, next) {
+        Watch.find({ name: { $regex: '.*' + req.query.keyword + '.*' } }).lean()
+            .then(watches => {
+                res.render('adminWatch', { watches })
+            })
+            .catch(next)
     }
 }
 var formatter = new Intl.NumberFormat('en-US', {
